@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Coletti
+        link(rel="stylesheet", href="/plugins/bootstrap/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/plugins/font-awesome/css/font-awesome.min.css")
+        link(rel="stylesheet", href="/css/index.min.css")
+    body
+        .container
+            .row.mt-sm-3.pb-sm-4
+                .col-sm-1.d-none.d-sm-block.p-0.logo
+                    a(href="#")
+                        img.img-fluid(src="/image/logo.png", alt="Coletti")
+                .col-sm-11.p-0
+                    .row.m-0
+                        .col-sm-12.d-none.d-sm-block.p-0.top-bar
+                            ul.nav.justify-content-end
+                                li.nav-item
+                                    a.nav-link(href="#") Ayuda
+                                li.nav-item
+                                    a.nav-link(href="#") Iniciar Sesión
+                                li.nav-item
+                                    a.nav-link(href="#") Crear Cuenta
+                                li.nav-item
+                                    a.nav-link(href="#") Lista de Libros
+                                li.nav-item
+                                    a.nav-link(href="#") Lo Más Pedido
+                                li.nav-item
+                                    .input-group
+                                        input.form-control(type=search, placeholder="Buscar...")
+                                        span.input-group-append
+                                            button.btn.btn-default(type="button") BUSCAR
+                        .col-sm-12.p-0
+                            .row.m-0
+                                .col-sm-8.d-flex.align-items-end.p-0
+                                    nav.navbar.navbar-light.w-100
+                                        .navbar-expand-sm.w-100
+                                            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+                                                span.navbar-toggler-icon
+                                            .navbar__toolbar
+                                                img.img-fluid.navbar__toolbar__img(src="/image/logo-horizontal.png", alt="Coletti")
+                                            #navbar.collapse.navbar-collapse
+                                                ul.navbar-nav
+                                                    li.nav-item.active
+                                                        a.nav-link(href='#') Inicio
+                                                    li.nav-item
+                                                        a.nav-link(href='#') Catalogo
+                                                    li.nav-item
+                                                        a.nav-link(href='#') Nosotros
+                                                    li.nav-item
+                                                        a.nav-link(href='#') Contacto
+                                .col-sm-2.d-none.d-sm-flex.icon__carrito
+                                    .icon__carrito__img
+                                        img.img-fluid(src="/image/icon_carrito.png", alt="carrito")
+                                    .icon__carrito__cantidad
+                                        span 5
+                                .col-sm-2.d-none.d-sm-block.p-0
+                                    img.img-fluid(src="/image/Pedidos.png", alt="Numero de Pedidos")
+        .container-fluid
+            .row.banner-top
+                .col-sm-4.p-0
+                    .banner-top__flecha.d-flex.align-items-center.justify-content-center
+                        img(src="/image/balla.png", alt="")
+                        span.d-block
+                            b Buscar tu mejor opción
+                .col-sm-8.d-flex.align-items-center.justify-content-center
+                    ul.nav.justify-content-center.banner-top__nav
+                        li.nav-item.dropdown
+                            a#dropdown01.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false', data-arrow="false")
+                                | Editorial
+                                i.fa.fa-angle-down(aria-hidden='true')
+                            .dropdown-menu(aria-labelledby='dropdown01')
+                                a.dropdown-item(href='#') Action
+                                a.dropdown-item(href='#') Another action
+                                a.dropdown-item(href='#') Something else here
+                        li.nav-item.dropdown
+                            a#dropdown01.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false', data-arrow="false")
+                                | Asignatura
+                                i.fa.fa-angle-down(aria-hidden='true')
+                            .dropdown-menu(aria-labelledby='dropdown01')
+                                a.dropdown-item(href='#') Action
+                                a.dropdown-item(href='#') Another action
+                                a.dropdown-item(href='#') Something else here
+                        li.nav-item.dropdown
+                            a#dropdown01.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false', data-arrow="false")
+                                | Nivel
+                                i.fa.fa-angle-down(aria-hidden='true')
+                            .dropdown-menu(aria-labelledby='dropdown01')
+                                a.dropdown-item(href='#') Action
+                                a.dropdown-item(href='#') Another action
+                                a.dropdown-item(href='#') Something else here
+                        li.nav-item.dropdown
+                            a#dropdown01.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false', data-arrow="false")
+                                | Grado
+                                i.fa.fa-angle-down(aria-hidden='true')
+                            .dropdown-menu(aria-labelledby='dropdown01')
+                                a.dropdown-item(href='#') Action
+                                a.dropdown-item(href='#') Another action
+                                a.dropdown-item(href='#') Something else here
+        .container-fluid.p-0
+            #carouselExampleControls.carousel.slide(data-ride='carousel')
+                .carousel-inner
+                    .carousel-item.active
+                        img.d-block.w-100(src='/image/HomePrincipal.png', alt='First slide')
+                    .carousel-item
+                        img.d-block.w-100(src='/image/HomePrincipal.png', alt='Second slide')
+                    .carousel-item
+                        img.d-block.w-100(src='/image/HomePrincipal.png', alt='Third slide')
+                a.carousel-control-prev(href='#carouselExampleControls', role='button', data-slide='prev')
+                    span.carousel-control-prev-icon(aria-hidden='true')
+                    span.sr-only Previous
+                a.carousel-control-next(href='#carouselExampleControls', role='button', data-slide='next')
+                    span.carousel-control-next-icon(aria-hidden='true')
+                    span.sr-only Next
+        .container
+            .row.justify-content-center.card__home
+                .col-12.col-sm-6.col-lg-4.card__home__item.d-flex.flex-column.text-center.justify-content-center
+                    span.card__home__item__title Los mejores 50 Libros de hoy
+                    span.card__home__item__body Elija de nuestra colección de 50 libros mejor valorados al precio más bajo.
+                    div
+                        a.card__home__item__link(href="#") ¡Compra Ahora!
+                .col-12.col-sm-6.col-lg-4.card__home__item.d-flex.flex-column.text-center.justify-content-center
+                    span.card__home__item__title Lectura recomendada
+                    span.card__home__item__body Vea todos nuestros libros recomendados y elija lo que más le convenga.
+                    div
+                        a.card__home__item__link(href="#") ¡Compra Ahora!
+                .col-12.col-sm-12.col-lg-4.card__home__item.d-flex.flex-column.text-center.justify-content-center
+                    span.card__home__item__title -50%
+                    span.card__home__item__body Ahorre hasta un 50% de descuento en todos los lanzamientos nuevos. ¡Lee con placer y ahorra tu dinero!
+                    div    
+                        a.card__home__item__link(href="#") ¡Compra Ahora!
+            .row
+                .col-sm-12
+                    ul#productosTab.productosTab.nav.justify-content-center.mt-5.mb-5(role="tablist")
+                        li.nav-item
+                            a#productosTab__destacados.nav-link.active(data-toggle="pill" href="#productosTab__destacados__content" role="tab" aria-controls="pills-home" aria-selected="true") Productos Destacados
+                        li.nav-item
+                            a#productosTab__ultimos.nav-link(data-toggle="pill" href="#productosTab__ultimos__content" role="tab" aria-controls="pills-home" aria-selected="false") Últimos Productos
+                        li.nav-item
+                            a#productosTab__mejores.nav-link(data-toggle="pill" href="#productosTab__mejores__content" role="tab" aria-controls="pills-home" aria-selected="false") Mejores Productos
+                    #productosTab__content.productosTab__content.tab-content
+                        .tab-pane.fade.show.active#productosTab__destacados__content(role="tabpanel" aria-labelledby="pills-home-tab")
+                            .row
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro1.png", alt="Libro1")
+                                        .producto__etiquetaNuevo
+                                            span NUEVO
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .w-100.d-block.d-sm-none
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro1.png", alt="Libro1")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .w-100.d-block.d-sm-none
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro1.png", alt="Libro1")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .w-100.d-block.d-lg-none
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro1.png", alt="Libro1")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .w-100.d-block.d-sm-none
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro1.png", alt="Libro1")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .w-100.d-block.d-sm-none.d-lg-block
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro1.png", alt="Libro1")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .w-100.d-block.d-lg-none
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro1.png", alt="Libro1")
+                                        .producto__etiquetaNuevo
+                                            span NUEVO
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .w-100.d-block.d-sm-none
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro1.png", alt="Libro1")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .w-100.d-block.d-sm-none
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro1.png", alt="Libro1")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .w-100.d-block.d-lg-none
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro1.png", alt="Libro1")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                        .tab-pane.fade#productosTab__ultimos__content(role="tabpanel" aria-labelledby="pills-home-tab")
+                            .row
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro2.png", alt="Libro2")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro2.png", alt="Libro2")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro2.png", alt="Libro2")
+                                        .producto__etiquetaNuevo
+                                            span NUEVO
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro2.png", alt="Libro2")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro2.png", alt="Libro2")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .w-100
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro2.png", alt="Libro2")
+                                        .producto__etiquetaNuevo
+                                            span NUEVO
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro2.png", alt="Libro2")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro2.png", alt="Libro2")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro2.png", alt="Libro2")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro2.png", alt="Libro2")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                        .tab-pane.fade#productosTab__mejores__content(role="tabpanel" aria-labelledby="pills-home-tab")
+                            .row
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro3.png", alt="Libro3")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro3.png", alt="Libro3")
+                                        .producto__etiquetaNuevo
+                                            span NUEVO
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro3.png", alt="Libro3")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro3.png", alt="Libro3")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro3.png", alt="Libro3")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .w-100
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro3.png", alt="Libro3")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro3.png", alt="Libro3")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro3.png", alt="Libro3")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro3.png", alt="Libro3")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                .col.mb-4
+                                    .producto
+                                        .producto__img
+                                            img.img-fluid(src="/image/Libro3.png", alt="Libro3")
+                                        .producto__nombre
+                                            span VOLETASA MYTRAS
+                                        .producto__descripcion
+                                            span Es Bueno, leer libros como un hobby...
+                                        .producto__carrito.row.m-0
+                                            .col-sm-8.producto__carrito__precio
+                                                span.producto__carrito__precio__simbolo S/.
+                                                span.producto__carrito__precio__valor 75.00
+                                            .col-sm-4.producto__carrito__agregarCarrito
+                                                i.fa.fa-shopping-cart(aria-hidden="true")
+        .container-fluid.p-0
+            .banner__interno
+                img.img-fluid.banner__interno__img(src="/image/LosMejoresLibros.png", alt="LosMejoresLibros")
+                .banner__interno__texto.w-100.p-5
+                    .banner__interno__texto__inner.d-inline-block.text-center
+                        span.banner__interno__texto__title Los Mejores libros del año
+                        span.banner__interno__texto__subTitle Busque el libro desde la comodidad de su hogar u oficina.
+        .container
+            .boletin.row
+                .col-sm-12.boletin__title.text-center.justify-content-center.mt-5.mb-5
+                    span BOLETIN
+                .col-sm-12.boletin__body
+                    .row
+                        .col-12.col-sm-6.col-lg-3
+                            .boletin__item
+                                .boletin__item__img
+                                    img(src="/image/Boletin1.png", alt="Boletin1")
+                                .boletin__item__title
+                                    span Cómo Mantener su Corazón Saludable
+                                .boletin__item__descripcion
+                                    span Entonces, ¿cómo mantener tu corazón sano? Con tantas enfermedades del corazón en aumento, la mayoría de las personas conscientes de la salud se esfuerzan ...
+                                .boletin__item__button
+                                    a.btn.btn-primary(href="#") Leer Más
+                        .col-12.col-sm-6.col-lg-3
+                            .boletin__item
+                                .boletin__item__img
+                                    img(src="/image/Boletin2.png", alt="Boletin1")
+                                .boletin__item__title
+                                    span Cómo Mantener su Corazón Saludable
+                                .boletin__item__descripcion
+                                    span Entonces, ¿cómo mantener tu corazón sano? Con tantas enfermedades del corazón en aumento, la mayoría de las personas conscientes de la salud se esfuerzan ...
+                                .boletin__item__button
+                                    a.btn.btn-primary(href="#") Leer Más
+                        .col-12.col-sm-6.col-lg-3
+                            .boletin__item
+                                .boletin__item__img
+                                    img(src="/image/Boletin1.png", alt="Boletin1")
+                                .boletin__item__title
+                                    span Cómo Mantener su Corazón Saludable
+                                .boletin__item__descripcion
+                                    span Entonces, ¿cómo mantener tu corazón sano? Con tantas enfermedades del corazón en aumento, la mayoría de las personas conscientes de la salud se esfuerzan ...
+                                .boletin__item__button
+                                    a.btn.btn-primary(href="#") Leer Más
+                        .col-12.col-sm-6.col-lg-3
+                            .boletin__item
+                                .boletin__item__img
+                                    img(src="/image/Boletin2.png", alt="Boletin1")
+                                .boletin__item__title
+                                    span Cómo Mantener su Corazón Saludable
+                                .boletin__item__descripcion
+                                    span Entonces, ¿cómo mantener tu corazón sano? Con tantas enfermedades del corazón en aumento, la mayoría de las personas conscientes de la salud se esfuerzan ...
+                                .boletin__item__button
+                                    a.btn.btn-primary(href="#") Leer Más
+        .container-fluid.footer
+            .container.pt-5.pb-5
+                .row.footer__body
+                    .footer__item.col-6.col-sm-3.col-lg-2
+                        .footer__item__title
+                            span Clasificación
+                        .footer__item__body
+                            ul.nav.flex-column
+                                li.nav-item
+                                    a.nav-link(href="#") Matemáticas
+                                li.nav-item
+                                    a.nav-link(href="#") Religión
+                                li.nav-item
+                                    a.nav-link(href="#") Física
+                                li.nav-item
+                                    a.nav-link(href="#") Historia del Perú
+                                li.nav-item
+                                    a.nav-link(href="#") Libros de Inicial
+                    .footer__item.col-6.col-sm-3.col-lg-2
+                        .footer__item__title
+                            span Navegación
+                        .footer__item__body
+                            ul.nav.flex-column
+                                li.nav-item
+                                    a.nav-link(href="#") Inicio
+                                li.nav-item
+                                    a.nav-link(href="#") Catálogo
+                                li.nav-item
+                                    a.nav-link(href="#") Nosotros
+                                li.nav-item
+                                    a.nav-link(href="#") Boletín
+                                li.nav-item
+                                    a.nav-link(href="#") Contacto
+                    .footer__item.col-6.col-sm-3.col-lg-2
+                        .footer__item__title
+                            span Información
+                        .footer__item__body
+                            ul.nav.flex-column
+                                li.nav-item
+                                    a.nav-link(href="#") Terminos y Condiciones
+                                li.nav-item
+                                    a.nav-link(href="#") Cuenta
+                    .footer__item.col-6.col-sm-3.col-lg-2
+                        .footer__item__title
+                            span Siguenos
+                        .footer__item__body
+                            ul.nav.flex-column
+                                li.nav-item
+                                    a.nav-link(href="#")
+                                        i.fa.fa-facebook(aria-hidden="true")
+                                li.nav-item
+                                    a.nav-link(href="#")
+                                        i.fa.fa-twitter(aria-hidden="true")
+                                li.nav-item
+                                    a.nav-link(href="#")
+                                        i.fa.fa-youtube(aria-hidden="true")
+                    .footer__item.col-12.col-sm-6.col-lg-4
+                        .footer__item__title
+                            span Recibe Nuestras Novedades
+                        .footer__item__body
+                            .input-group
+                                input.form-control(type=search, placeholder="Correo...")
+                                span.input-group-append
+                                    button.btn.btn-default(type="button") OK
+                            img.img-fluid.d-block(src="/image/logo.png", alt="Coletti")
+        script(src="/plugins/jquery/jquery-3.2.1.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js")
+        script(src="/plugins/bootstrap/js/bootstrap.min.js")
+        script(src="/js/index.min.js")
